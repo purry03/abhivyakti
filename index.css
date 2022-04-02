@@ -10,6 +10,9 @@ body {
     font-family: "Exo 2";
 }
 
+p {
+    text-align: justify;
+}
 
 
 .section {
@@ -25,6 +28,7 @@ body {
     color: #fff;
     text-align: center;
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0092e6, 0 0 40px #0092e6, 0 0 50px #0092e6, 0 0 60px #0092e6, 0 0 70px #0092e6;
+    opacity: 0.9;
 }
 
 
@@ -45,11 +49,11 @@ body {
 }
 
 #intro h3,
-#intro h5 {
+#intro h2 {
     font-weight: 300;
 }
 
-#intro h5 {
+#intro h2 {
     margin: 25px 0;
 }
 
@@ -93,4 +97,8 @@ body {
 #venue h2 {
     margin: 10px 0;
     font-weight: 300;
+}
+
+#venue {
+    border-bottom: 1px solid rgba(170, 170, 170, 0.212);
 }

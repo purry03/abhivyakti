@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="carousel.css">
+
 </head>
 
 <body>
@@ -24,7 +26,7 @@
     <div class="section" id="intro">
         <h1>LET'S GO WHERE THE MUSIC IS TOO LOUD</h1>
         <h3>Join The Event</h3>
-        <h5>XERO NIGHT</h5>
+        <h2>XERO NIGHT</h2>
         <h3>On March 23, 2021</h3>
         <p>
             Lots of enjoying and dancing crowd, banging
@@ -70,6 +72,81 @@
         <h2>Main Road Tiwariganj (NH-28), Faizabad Rd, Lucknow, Uttar Pradesh 227105</h2>
     </div>
 
+    <div class="section" id="guests">
+
+        <h1>Past Guests</h1>
+
+        <div class="carousel">
+            <div class="carousel__nav">
+                <span id="moveLeft" class="carousel__arrow">
+                    <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
+                    </svg>
+                </span>
+                <span id="moveRight" class="carousel__arrow">
+                    <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+                    </svg>
+                </span>
+            </div>
+            <div class="carousel-item carousel-item--1">
+                <div class="carousel-item__image"></div>
+                <div class="carousel-item__info">
+                    <div class="carousel-item__container">
+                        <h2 class="carousel-item__title">Le tour</h2>
+                        <p class="carousel-item__description">Sed ut perspiciatis unde omnis iste natus error sit
+                            voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item carousel-item--2">
+                <div class="carousel-item__image"></div>
+                <div class="carousel-item__info">
+                    <div class="carousel-item__container">
+                        <h2 class="carousel-item__title">Minimal window</h2>
+                        <p class="carousel-item__description">Clear Glass Window With Brown and White Wooden Frame iste
+                            natus error sit voluptatem accusantium doloremque laudantium.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item carousel-item--3">
+                <div class="carousel-item__image"></div>
+                <div class="carousel-item__info">
+                    <div class="carousel-item__container">
+                        <h2 class="carousel-item__title">Palms</h2>
+                        <p class="carousel-item__description">Sed ut perspiciatis unde omnis iste natus error sit
+                            voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item carousel-item--4">
+                <div class="carousel-item__image"></div>
+                <div class="carousel-item__info">
+                    <div class="carousel-item__container">
+                        <h2 class="carousel-item__title">The beach </h2>
+                        <p class="carousel-item__description">Sed ut perspiciatis unde omnis iste natus error sit
+                            voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item carousel-item--5">
+                <div class="carousel-item__image"></div>
+                <div class="carousel-item__info">
+                    <div class="carousel-item__container">
+                        <h2 class="carousel-item__title">White building</h2>
+                        <p class="carousel-item__description">Sed ut perspiciatis unde omnis iste natus error sit
+                            voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="carousel.js"> </script>
     <script type="text/javascript">
         var x = new Date();
         var y = x.getTime();
@@ -90,7 +167,6 @@
             h = (h < 10) ? "0" + h : h;
             m = (m < 10) ? "0" + m : m;
             s = (s < 10) ? "0" + s : s;
-
             document.getElementById("hours").innerHTML = h;
             document.getElementById("min").innerHTML = m;
             document.getElementById("sec").innerHTML = s;
