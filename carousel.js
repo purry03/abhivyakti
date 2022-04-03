@@ -1,36 +1,44 @@
-$(function () {
-    $('.carousel-item').eq(0).addClass('active');
-    var total = $('.carousel-item').length;
-    var current = 0;
-    $('#moveRight').on('click', function () {
-        var next = current;
-        current = current + 1;
-        setSlide(next, current);
-    });
-    $('#moveLeft').on('click', function () {
-        var prev = current;
-        current = current - 1;
-        setSlide(prev, current);
-    });
-    function setSlide(prev, next) {
-        var slide = current;
-        if (next > total - 1) {
-            slide = 0;
-            current = 0;
-        }
-        if (next < 0) {
-            slide = total - 1;
-            current = total - 1;
-        }
-        $('.carousel-item').eq(prev).removeClass('active');
-        $('.carousel-item').eq(slide).addClass('active');
-        setTimeout(function () {
+var slides = document.querySelectorAll(".slide");
+var dots = document.querySelectorAll(".dot");
+var index = 0;
 
-        }, 800);
+
+function prevSlide(n) {
+    index += n;
+    console.log("prevSlide is called");
+    changeSlide();
+}
+
+function nextSlide(n) {
+    index += n;
+    changeSlide();
+}
+
+changeSlide();
+
+function changeSlide() {
+
+    if (index > slides.length - 1)
+        index = 0;
+
+    if (index < 0)
+        index = slides.length - 1;
 
 
 
-        console.log('current ' + current);
-        console.log('prev ' + prev);
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+
+        dots[i].classList.remove("active");
+
+
     }
-});
+
+    slides[index].style.display = "block";
+    dots[index].classList.add("active");
+
+
+
+}
+
+

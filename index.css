@@ -101,4 +101,55 @@ p {
 
 #venue {
     border-bottom: 1px solid rgba(170, 170, 170, 0.212);
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    .section {
+        max-width: 100vw;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #top {
+        height: 25vh;
+        background-position: center;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    #intro h2 {
+        margin: 10px 0;
+    }
+
+    #timer-wrapper {
+        width: 100vw;
+    }
+
+    #timer {
+        font-size: 4rem;
+        padding: 25px 0;
+
+    }
+
+    .colon {
+        margin: 0 10px;
+    }
+
+    #venue {
+        font-size: 0.8rem;
+    }
+
 }
