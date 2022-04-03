@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Abhivyakti</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="xero.css">
+    <link rel="stylesheet" href="carousel.css">
+
+</head>
+
+<body>
+
+    <div class="section" id="top">
+
+    </div>
+
+    <div class="section" id="intro">
+        <h1>LET'S GO WHERE THE MUSIC IS TOO LOUD</h1>
+        <h3>Join The Event</h3>
+        <h2>XERO NIGHT</h2>
+        <h3>On March 23, 2021</h3>
+        <p>
+            Lots of enjoying and dancing crowd, banging
+            heads,
+            Enthusiastic sound
+            system, a
+            reverberating stage and a chance for you to be with the crowd and enjoy the whole evening with one of
+            the most
+            Lovable, Sensational and Enthusiastic singer PRATYAKSH. We would like to welcome you all in our Star
+            Night on 27th
+            February to enjoy your night with our star in our college.<br><br>
+
+            15,000 heads banging, 60,000 watts of sound, a reverberating stage, one night and your chance to be in
+            the midst
+            of it all. With bands from all over the country coming to our college for xero, this fest surely rocks.
+        </p>
+    </div>
+
+    <div class="section" id="timer-wrapper">
+        <h1>KEEP CALM IT'S THE FINAL COUNTDOWN !</h1>
+        <div id="timer">
+            <div class="dial" id="hours">
+                00
+            </div>
+            <div class="colon">
+                :
+            </div>
+            <div class="dial" id="min">
+                00
+            </div>
+            <div class="colon">
+                :
+            </div>
+            <div class="dial" id="sec">
+                00
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="venue">
+        <h1>REACH US</h1>
+        <h2>Shri Ramswaroop College Of Engineering And Management</h2>
+        <h2>Main Road Tiwariganj (NH-28), Faizabad Rd, Lucknow, Uttar Pradesh 227105</h2>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="carousel.js"> </script>
+    <script type="text/javascript">
+        var x = new Date();
+        var y = x.getTime();
+        var total = y + (4 * 24 * 3600000);
+
+        function count() {
+            var now = new Date();
+            var currentTime = now.getTime();
+
+            var diff = total - currentTime;
+            var s = Math.floor(diff / 1000);
+            var m = Math.floor(s / 60);
+            var h = Math.floor(m / 60);
+
+            m = m % 60;
+            s = s % 60;
+
+            h = (h < 10) ? "0" + h : h;
+            m = (m < 10) ? "0" + m : m;
+            s = (s < 10) ? "0" + s : s;
+            document.getElementById("hours").innerHTML = h;
+            document.getElementById("min").innerHTML = m;
+            document.getElementById("sec").innerHTML = s;
+        }
+        setInterval(count, 1000);
+    </script>
+</body>
+
+</html>
